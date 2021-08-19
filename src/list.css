@@ -1,0 +1,312 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.logo-list{
+    width: 100vw;
+    height: 20vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo-list p{
+    font-family: Quicksand;
+    font-size: 5em;
+
+    margin-left: 3rem;
+}
+
+.logo-list p::before{
+    content: '';
+    position: absolute;
+    left: 8.5%;
+    width: 1em;
+    height: 4px;
+    background: #38434D;
+}
+
+.conteudo-list{
+    width: 100%;
+    height: 80vh;
+}
+
+.conteudo-list .headers{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+
+    margin-left: 5rem;
+}
+
+.conteudo-list .headers .id{
+    width: 2vw;
+    transform: translateX(1vw);
+}
+.conteudo-list .headers .titulo{
+    width: 15vw;
+}
+.conteudo-list .headers .descricao{
+    width: 15vw;
+}
+.conteudo-list .headers .data{
+    width: 10vw;
+}
+.conteudo-list .headers .categoria{
+    width: 10vw;
+}
+
+.conteudo-list .headers p{
+    font-family: Poppins;
+    letter-spacing: .1em;
+    color:#38434D;
+
+    margin-right: 2rem;
+}
+
+.conteudo-list .headers .novo-produto{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    cursor: pointer;
+}
+.conteudo-list .headers .novo-produto p{
+    margin-left: .5rem;
+}
+
+.conteudo-list .product-list{
+    width: 85%;
+    height: 70vh;
+
+    margin-left: 5rem;
+
+    overflow-y: auto;
+}
+
+.conteudo-list .product-list .product{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    border-radius: 25px;
+
+    /* margin-bottom: 1rem; */
+
+    background: #58748C;
+
+    font-family: Poppins;
+    letter-spacing: .1em;
+    color: #E3D6D5;
+    position: relative;
+    z-index: 1;
+}
+
+.conteudo-list .product-list .product #id{
+    width: 2vw;
+}
+
+.conteudo-list .product-list .product #titulo{
+    width: 15vw;
+}
+
+.conteudo-list .product-list .product #descricao{
+    width: 15vw;
+}
+.conteudo-list .product-list .product #data{
+    width: 10vw;
+}
+.conteudo-list .product-list .product #categoria{
+    width: 10vw;
+}
+
+.conteudo-list .product-list .product .buttons{
+    width: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-list .product-list .product .buttons svg{
+    cursor: pointer;
+}
+
+.conteudo-list .product-list .product .buttons svg path{
+    transition: .7s ease-in;
+}
+.conteudo-list .product-list .product .buttons svg:hover path{
+    fill: white;
+}
+
+.conteudo-list .product-list > div{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.conteudo-list .product-list .formulario.abrir{
+    animation: abrirEditar 2s ease-in both;
+}
+
+@keyframes abrirEditar {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 65vh;
+    }
+}
+
+.conteudo-list .product-list .formulario.fechar{
+    animation: fecharEditar 2s ease-out both;
+}
+
+@keyframes fecharEditar {
+    0%{
+        height: 65vh;
+    }
+    100%{
+        height: 0;
+    }
+}
+
+.alterar-produto .formulario{
+    width: calc(100% - 4px);
+    height: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #E3D6D5;
+
+    border: 2px solid #58748C;
+    border-end-end-radius: 25px;
+    border-end-start-radius: 25px;
+
+    position: relative;
+    z-index: 0;
+
+    transform: translateY(-2rem);
+
+    overflow:hidden;
+}
+
+.alterar-produto .formulario > div,
+.div-novo-produto .formulario > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.alterar-produto .formulario > div label,
+.div-novo-produto .formulario > div label{
+    font-family: Poppins;
+    font-size: 1rem;
+    letter-spacing: .1em;
+
+    color: #38434D;
+
+}
+
+.alterar-produto .formulario > div input,
+.div-novo-produto .formulario > div input{
+    width: 90%;
+    height: 5vh;
+
+    border: none;
+    border-radius: 25px;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-family: Poppins;
+    letter-spacing: .1em;
+    color: #58748C;
+}
+.alterar-produto .formulario > div input:focus,
+.div-novo-produto .formulario > div input:focus{
+    outline: none;
+} 
+
+.alterar-produto .formulario > div .select,
+.div-novo-produto .formulario > div .select{
+    width: 95%;
+}
+
+.alterar-produto .formulario button,
+.div-novo-produto .formulario button{
+    width: 30vw;
+    height: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    background: #58748C;
+    color: #E3D6D5;
+
+    border: none;
+    border-radius: 25px;
+
+    font-family: Poppins;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+}
+
+.alterar-produto .formulario button:hover,
+.div-novo-produto .formulario button:hover{
+    background: #38434D;
+    color: white;
+}
+
+.div-novo-produto{
+    display: none;
+
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 25%;
+    right: 25%;
+
+    width: 50vw;
+    height: 70vh;
+
+    border-radius: 25px;
+
+    background: #E3D6D5;
+
+    z-index: 3;
+}
+
+.div-novo-produto .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.div-novo-produto .top h1{
+    font-family: Quicksand;
+    font-size: 2em;
+
+    color: white;
+    position: relative;
+}
+
+.div-novo-produto .top .close{
+    position: absolute;
+
+    top: 2rem;
+    right: 2rem;
+
+    cursor: pointer;
+}

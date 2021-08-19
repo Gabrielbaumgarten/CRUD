@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "produtos": [
+    {
+      "titulo": "Camiseta",
+      "descricao": "Boa para usar no verão",
+      "data": "2021-08-18",
+      "categoria": "Roupa",
+      "id": 1
+    },
+    {
+      "titulo": "Tênis",
+      "descricao": "Bom para qualquer época do ano",
+      "data": "2021-08-10",
+      "categoria": "Calçado",
+      "id": 2
+    }
+  ]
+}
